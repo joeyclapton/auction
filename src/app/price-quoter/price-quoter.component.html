@@ -1,7 +1,7 @@
 <div>
     <strong>Inside Price Quoter:
-        <span>{{priceQuote?.stockSymbol}}</span>
-        <span>{{priceQuote?.lastPrice | currency: 'USD'}}</span>
+        <span *ngIf="priceQuote.stockSymbol">{{priceQuote.stockSymbol}}</span>
+        <span *ngIf="priceQuote.lastPrice">{{priceQuote.lastPrice | currency: 'USD'}}</span>
     </strong>
 
 
