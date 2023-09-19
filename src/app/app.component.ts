@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'auction';
+  stock: string = '';
+  readonly numberOfShares = 100;
+
+  onChangeEvent({ target }: any) {
+    this.stock = target.value
+  }
 }
