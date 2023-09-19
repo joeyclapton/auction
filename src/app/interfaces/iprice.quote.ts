@@ -1,4 +1,4 @@
-export interface IpriceQuote {
+export interface IPriceQuote {
     stockSymbol: string;
     lastPrice: number;
 }

@@ -1,3 +1,5 @@
 <app-product name="Iphone 15 PRO" />
 <input type="text" placeholder="Enter stock (e.g AAPL)" (input)="onChangeEvent($event)" />
 <app-order-processor [stockSymbol]="stock" [quantity]="numberOfShares" />
+<hr />
+<app-price-quoter (lastPrice)="priceQuoteHandler($event)" />
