@@ -5,4 +5,11 @@
     <div *ngFor="let product of products">
         <app-product [id]="product.id" [name]="product.name" />
     </div>
+    <div>
+        <input type="text" name="shippingAddress" id="shippingAddress" placeholder="Enter shipping address"
+            [(ngModel)]="shippingAddress" />
+        <span>
+            Shipping Address > {{ shippingAddress }}
+        </span>
+    </div>
 </section>

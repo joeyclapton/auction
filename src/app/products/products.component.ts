@@ -10,6 +10,8 @@ export class ProductsComponent {
 
   @Input() products: Array<IProduct> = [];
 
+  shippingAddress: string = '';
+
   constructor() { }
 
 }
