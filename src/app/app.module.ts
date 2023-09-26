@@ -8,6 +8,7 @@ import { ProductComponent } from './product/product.component';
 import { OrderProcessorComponent } from './order-processor/order-processor.component';
 import { PriceQuoterComponent } from './price-quoter/price-quoter.component';
 import { ProductsComponent } from './products/products.component';
+import { HighlightDirective } from './shared/directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProductsComponent } from './products/products.component';
     ProductComponent,
     OrderProcessorComponent,
     PriceQuoterComponent,
-    ProductsComponent
+    ProductsComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
