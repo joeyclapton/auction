@@ -13,10 +13,10 @@ export class ProductService {
 
   private createProducts() {
     this.products.push({
-      id: 0,
+      id: 21313,
       name: 'Iphone 12'
     }, {
-      id: 1,
+      id: 131231,
       name: 'Macbook Air M1 2020'
     })
   }

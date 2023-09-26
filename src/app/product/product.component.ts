@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductComponent {
 
+  @Input() id: number = 0;
   @Input() name: string = '';
 
 }

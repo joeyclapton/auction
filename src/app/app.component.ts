@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IPriceQuote } from './interfaces/iprice.quote';
+import { ProductService } from './shared/product/product.service';
+import { IProduct } from './interfaces/iproduct';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +13,11 @@ export class AppComponent {
   stock: string = '';
   readonly numberOfShares = 100;
   priceQuote!: IPriceQuote;
+  products: Array<IProduct> = [];
+
+  constructor(productService: ProductService) {
+    this.products = productService.getAll();
+  }
 
   onChangeEvent({ target }: any) {
     this.stock = target.value
