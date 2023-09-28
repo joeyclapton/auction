@@ -1,8 +1,18 @@
-<div appHighlight>
-    <p>
-        ID: {{ id }}
-    </p>
-    <p>
-        Name: {{ name }}
-    </p>
-</div>
+<section>
+    <div>
+        <h2>Pick a highlight color</h2>
+        <div>
+            <input type="radio" name="colors" (click)="onChangeColor('lightgreen')">Green
+            <input type="radio" name="colors" (click)="onChangeColor('yellow')">Yellow
+            <input type="radio" name="colors" (click)="onChangeColor('cyan')">Cyan
+        </div>
+    </div>
+    <div appHighlight [highlightColor]="color">
+        <p>
+            ID: {{ id }}
+        </p>
+        <p>
+            Name: {{ name }}
+        </p>
+    </div>
+</section>
