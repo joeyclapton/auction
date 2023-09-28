@@ -4,3 +4,6 @@
 <app-order-processor [stockSymbol]="stock" [quantity]="numberOfShares" />
 <hr />
 <app-price-quoter (lastPrice)="priceQuoteHandler($event)" [eventType]="'emitter'" />
+<button appPreventAction status="UNSAVE">
+    Fechar pedido
+</button>
