@@ -11,6 +11,7 @@ import { ProductsComponent } from './products/products.component';
 import { HighlightDirective } from './shared/directives/highlight.directive';
 import { PreventActionDirective } from './shared/directives/prevent-action.directive';
 import { BirthdayComponent } from './birthday/birthday.component';
+import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BirthdayComponent } from './birthday/birthday.component';
     ProductsComponent,
     HighlightDirective,
     PreventActionDirective,
-    BirthdayComponent
+    BirthdayComponent,
+    AsyncPipeComponent
   ],
   imports: [
     BrowserModule,
