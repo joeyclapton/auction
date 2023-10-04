@@ -10,6 +10,7 @@ import { PriceQuoterComponent } from './price-quoter/price-quoter.component';
 import { ProductsComponent } from './products/products.component';
 import { HighlightDirective } from './shared/directives/highlight.directive';
 import { PreventActionDirective } from './shared/directives/prevent-action.directive';
+import { BirthdayComponent } from './birthday/birthday.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PreventActionDirective } from './shared/directives/prevent-action.direc
     PriceQuoterComponent,
     ProductsComponent,
     HighlightDirective,
-    PreventActionDirective
+    PreventActionDirective,
+    BirthdayComponent
   ],
   imports: [
     BrowserModule,

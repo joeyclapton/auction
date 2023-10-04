@@ -14,6 +14,7 @@ export class AppComponent {
   readonly numberOfShares = 100;
   priceQuote!: IPriceQuote;
   products: Array<IProduct> = [];
+  birthday = new Date(2000, 0, 30)
 
   constructor(productService: ProductService) {
     this.products = productService.getAll();
