@@ -12,6 +12,7 @@ import { HighlightDirective } from './shared/directives/highlight.directive';
 import { PreventActionDirective } from './shared/directives/prevent-action.directive';
 import { BirthdayComponent } from './birthday/birthday.component';
 import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
+import { HotObserverComponent } from './hot-observer/hot-observer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
     HighlightDirective,
     PreventActionDirective,
     BirthdayComponent,
-    AsyncPipeComponent
+    AsyncPipeComponent,
+    HotObserverComponent
   ],
   imports: [
     BrowserModule,
