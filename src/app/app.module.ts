@@ -13,6 +13,7 @@ import { PreventActionDirective } from './shared/directives/prevent-action.direc
 import { BirthdayComponent } from './birthday/birthday.component';
 import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
 import { HotObserverComponent } from './hot-observer/hot-observer.component';
+import { ColdObserverComponent } from './cold-observer/cold-observer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HotObserverComponent } from './hot-observer/hot-observer.component';
     PreventActionDirective,
     BirthdayComponent,
     AsyncPipeComponent,
-    HotObserverComponent
+    HotObserverComponent,
+    ColdObserverComponent
   ],
   imports: [
     BrowserModule,

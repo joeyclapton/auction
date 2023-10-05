@@ -1,45 +1,31 @@
-import { Component } from '@angular/core';
-import { Observable, Observer, timeout } from 'rxjs';
-import { IMusic } from '../interfaces/imusic';
+import { Component, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-hot-observer',
+  selector: 'app-cold-observer',
   templateUrl: './hot-observer.component.html',
   styleUrls: ['./hot-observer.component.sass']
 })
-export class HotObserverComponent {
+export class HotObserverComponent implements OnInit {
 
-  constructor() {
-    this.coldObservable();
+  chatStream = new Subject()
+
+  ngOnInit() {
+    this.chatManagement()
   }
 
-  musicInfo: IMusic = {
-    name: 'Música A',
-    artist: 'Artista X',
-    duration: '4:30',
-  }
+  chatManagement() {
+    // Usuário 1 envia uma mensagem
 
-  coldObservable() {
-    const music = new Observable<IMusic>(observer => {
-      observer.next(this.musicInfo);
-
-      const updateTime = { ...this.musicInfo, duration: '4:45' }
-
-      setTimeout(() => {
-        observer.next(updateTime)
-      }, 2000)
-    })
-
-    music.subscribe(({ name, artist, duration }) => {
-      console.log(`Reproduzindo 01: ${name} - ${artist} (${duration})`);
+    // Usuário 2 se inscreve para receber mensagens em tempo real
+    this.chatStream.subscribe(message => {
+      console.log(message);
     });
 
-    setTimeout(() => {
-      music.subscribe(({ name, artist, duration }) => {
-        console.log(`Reproduzindo 02: ${name} - ${artist} (${duration})`);
-      });
-    }, 1000);
+    // Usuário 1 envia uma mensagem
+    this.chatStream.next({ user: 'Usuário 1', message: 'Olá a todos!', active: true });
 
+    // Usuário 3 envia uma mensagem
+    this.chatStream.next({ user: 'Usuário 3', message: 'Olá pessoal!' });
   }
-
 }
